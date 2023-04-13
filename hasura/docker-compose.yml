@@ -30,6 +30,9 @@ services:
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
       HASURA_GRAPHQL_JWT_SECRET: '{"type": "HS256","key": "this-is-a-generic-HS256-secret-key-and-you-should-really-change-it"}'
       
+      ## http://host.docker.internal:9000 is for MacOS and Windows
+      ## Use http://localhost:9000 for Linux
+      NODEJS_WEBHOOK: http://host.docker.internal:9000
 volumes:
   db_data:
 
